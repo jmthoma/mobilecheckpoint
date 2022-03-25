@@ -1,0 +1,200 @@
+/*Add padding and margin to space out the page.
+Make the font larger too.*/
+body{
+	margin:1%;
+	padding:1%;
+	font-size:150%;
+	font-family: 'Mali', cursive;
+}
+
+.index {
+	background-image: url(../images/about_background.jpg);
+    background-color: #f1f1f1;
+}
+
+/*Make the h1 heading bigger with a bold font*/
+h1{
+	font-size: 2em; 
+	font-weight: bold;
+}
+
+.h2{
+	font-weight: bolder;
+}
+
+.active{
+	background: white;
+    text-transform: uppercase;
+	text-align: center;
+}
+
+.active a{
+	text-decoration: none;;
+}
+
+/*Style the images*/
+.image-container {
+	position: relative;
+	height: fit-content;
+	width: min-content;
+	margin: 10px;
+}
+
+img{
+    height: 200px;
+    width: auto;
+    border: 5px solid black;
+    border-radius: 10px;
+	display: block
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: black;
+	border-radius: 10px;
+}
+
+.image-container:hover .overlay {
+	opacity: .5;
+}
+
+/*Make the h2 heading match h1*/
+h2{
+	font-size: 18pt;
+	font-weight: bold;
+	align-content: center;
+}
+
+/*Improve the spacing for paragraphs AND headings*/
+p, h1, h2 {
+    padding: 10px;
+}
+
+/*Add borders around the main components and some
+space too*/
+header, nav, main, h1, footer{
+	border: 2px solid white;
+	margin: 10px 0;
+}
+
+
+/*Change the styling for all of the list 
+items in the nav section*/
+nav li{
+	padding:5px;
+	width:5%;
+	border:1px solid lightgray;
+	width: 20%;
+	display: inline-block;
+	text-align: center;
+}
+
+.nav{
+	background: lightgray;
+	padding: 5px;
+	border: 1px solid white;
+	margin: 5px;
+}
+
+.caption{
+	font-style: italic;
+	font-size: 14pt;
+	color: rgb(51, 51, 51);
+}
+
+.description{
+	font-size: 16pt;
+	color: rgb(51, 51, 51);
+}
+
+/*Added this so the links stay the same color*/
+a:visited{color: darkblue}
+
+fieldset{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: auto;
+}
+
+legend{
+	font-size: 125%;
+	font-style:italic;
+	font-weight: bolder;
+	text-align: center;
+}
+
+input {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	border-radius: 8px;
+	font-family: 'Mali', cursive;
+}
+
+span{
+	margin-left:20%;
+	font-family: italic;
+	font-weight: bold;
+}
+  
+textarea{
+	width: 100%;
+	height: 35vh;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	border-radius: 8px;
+	font-family: 'Mali', cursive;
+}
+
+input[type=submit] {
+	background-color: coral;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 50%;
+	font-family: 'Mali', cursive;
+}
+  
+input[type=submit]:hover {
+	opacity: 0.8;
+}
+
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (min-width: 770px) {
+	form{
+	  width: 80%;
+	  margin: 0 auto;
+	}
+  
+	input{
+	  width:80%;
+	}
+  
+	textarea{
+	  width:80%;
+	  height: 25vh;
+   }
+   
+   div + label{
+	  line-height: 25vh;
+	  vertical-align:top;
+   }
+  }
