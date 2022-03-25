@@ -32,6 +32,10 @@ h1{
 	text-decoration: none;;
 }
 
+.sources{
+	font-weight: bold;
+}
+
 /*Style the images*/
 .image-container {
 	position: relative;
@@ -46,6 +50,10 @@ img{
     border: 5px solid black;
     border-radius: 10px;
 	display: block
+}
+
+img :nth-child(2n){
+    border: 5px solid coral;
 }
 
 .overlay {
@@ -88,17 +96,18 @@ header, nav, main, h1, footer{
 
 /*Change the styling for all of the list 
 items in the nav section*/
+
+
 nav li{
-	padding:5px;
-	width:5%;
-	border:1px solid lightgray;
+	padding:10px;
+	width:5%;;
 	width: 20%;
 	display: inline-block;
 	text-align: center;
 }
 
 .nav{
-	background: lightgray;
+	background: coral;
 	padding: 5px;
 	border: 1px solid white;
 	margin: 5px;
@@ -106,14 +115,25 @@ nav li{
 
 .caption{
 	font-style: italic;
-	font-size: 14pt;
+	font-size: 12pt;
 	color: rgb(51, 51, 51);
 }
 
 .description{
-	font-size: 16pt;
+	font-size: 14pt;
 	color: rgb(51, 51, 51);
 }
+
+.zoom {
+	transition: transform .2s;
+	width: auto;
+	height: auto;
+	margin: auto;
+  }
+
+.zoom:hover {
+	transform: scale(1.25);
+  }
 
 /*Added this so the links stay the same color*/
 a:visited{color: darkblue}
@@ -142,6 +162,7 @@ input {
 	box-sizing: border-box;
 	border-radius: 8px;
 	font-family: 'Mali', cursive;
+	background-color: lightgray;
 }
 
 span{
@@ -160,6 +181,7 @@ textarea{
 	box-sizing: border-box;
 	border-radius: 8px;
 	font-family: 'Mali', cursive;
+	background-color: lightgray;
 }
 
 input[type=submit] {
@@ -175,6 +197,22 @@ input[type=submit] {
   
 input[type=submit]:hover {
 	opacity: 0.8;
+}
+
+.container-highlight-images{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+  }
+
+.container-gallery{
+	display: grid;
+	padding: 2rem;
+	grid-template-columns: 300px 1fr;
+	gap: 1rem;
+	align-items: center;
+	max-width: 800px;
+	margin: 0 auto;
 }
 
   /* Change styles for span and cancel button on extra small screens */
@@ -197,4 +235,29 @@ input[type=submit]:hover {
 	  line-height: 25vh;
 	  vertical-align:top;
    }
+  }
+
+  @media all and (max-width: 600px) { 
+	.nav-container{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		width: auto;
+	}
+
+	.nav li{
+		flex-basis: 50%;
+	}
+  }
+
+
+/** Code for prefers reduced motion **/
+/* Make no changes below this line.
+   ***************************************
+   */
+   @media screen and (prefers-reduced-motion: reduce){
+	.zoom:hover {
+		transform: scale(1);
+	  }
   }
